@@ -1,0 +1,34 @@
+.customer__title {
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--main-color-text);
+}
+.customer__list {
+  display: flex;
+}
+
+.customer__list > .customer__item:not(:nth-child(6n)) {
+  margin-right: 30px;
+}
+
+.customer__link {
+  display: block;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: border-color 250ms var(--timing-function);
+  &:hover {
+    border: 1px solid var(--accent-color);
+  }
+
+  &:hover .customer__icon,
+  &:focus .customer__icon {
+    fill: var(--accent-color);
+  }
+}
+
+.customer__icon {
+  fill: #afb1b8;
+}
