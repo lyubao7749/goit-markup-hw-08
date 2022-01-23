@@ -4,6 +4,7 @@
 
   &__container {
     @media screen and (max-width: 1199px) {
+      align-items: baseline;
       text-align: center;
     }
   }
@@ -37,7 +38,6 @@
   margin-bottom: 60px;
   @media screen and (min-width: 1200px) {
     margin-right: 93px;
-    padding-top: 12px;
   }
 }
 

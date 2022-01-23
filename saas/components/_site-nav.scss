@@ -23,31 +23,39 @@
     &:focus {
       color: var(--accent-color);
     }
-  }
-  &__link--active {
-    color: var(--accent-color);
-
     @media screen and (min-width: 768px) {
       &::after {
         content: '';
         position: absolute;
         left: 0;
-        bottom: -1px;
-        height: 4px;
+        bottom: 0;
+        display: block;
         width: 100%;
-        background-color: var(--accent-color);
+        height: 4px;
         border-radius: 2px;
+        background-color: var(--accent-color);
         opacity: 0;
         transform: scaleX(0);
         transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
       }
-    }
-    &--active::after,
-    &:hover::after {
-      opacity: 1;
-      transform: scaleX(1);
+      &:hover::after {
+        opacity: 1;
+        transform: scaleX(1);
+      }
     }
   }
+
+  &__link--active {
+    color: var(--accent-color);
+    @media screen and (min-width: 768px) {
+      &::after,
+      &:hover::after {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+  }
+
   @media screen and (min-width: 768px) {
     display: flex;
     margin-left: 88px;

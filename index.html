@@ -100,48 +100,48 @@
       <section class="section features">
         <div class="container">
           <h2 class="section__title features__title features__title--invisible">Особенности</h2>
-          <ul class="feature__list">
-            <li class="feature__item">
-              <div class="feature__bgc-icon">
-                <svg class="icon feature__icon" width="70" height="70">
+          <ul class="features__list">
+            <li class="features__item">
+              <div class="features__bgc-icon">
+                <svg class="icon features__icon" width="70" height="70">
                   <use href="./images/icons.svg#antenna"></use>
                 </svg>
               </div>
-              <h3 class="feature__subtitle">Внимание к деталям</h3>
-              <p class="feature__meta">
+              <h3 class="features__subtitle">Внимание к деталям</h3>
+              <p class="features__meta">
                 Идейные соображения, а также начало повседневной работы по формированию позиции.
               </p>
             </li>
-            <li class="feature__item">
-              <div class="feature__bgc-icon">
-                <svg class="icon feature__icon" width="70" height="70">
+            <li class="features__item">
+              <div class="features__bgc-icon">
+                <svg class="icon features__icon" width="70" height="70">
                   <use href="./images/icons.svg#clock"></use>
                 </svg>
               </div>
-              <h3 class="feature__subtitle">Пунктуальность</h3>
-              <p class="feature__meta">
+              <h3 class="features__subtitle">Пунктуальность</h3>
+              <p class="features__meta">
                 Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
               </p>
             </li>
-            <li class="feature__item">
-              <div class="feature__bgc-icon">
-                <svg class="icon feature__icon" width="70" height="70">
+            <li class="features__item">
+              <div class="features__bgc-icon">
+                <svg class="icon features__icon" width="70" height="70">
                   <use href="./images/icons.svg#diagram"></use>
                 </svg>
               </div>
-              <h3 class="feature__subtitle">Планирование</h3>
-              <p class="feature__meta">
+              <h3 class="features__subtitle">Планирование</h3>
+              <p class="features__meta">
                 Равным образом консультация с широким активом в значительной степени обуславливает.
               </p>
             </li>
-            <li class="feature__item">
-              <div class="feature__bgc-icon">
-                <svg class="icon feature__icon" width="70" height="70">
+            <li class="features__item">
+              <div class="features__bgc-icon">
+                <svg class="icon features__icon" width="70" height="70">
                   <use href="./images/icons.svg#astronaut"></use>
                 </svg>
               </div>
-              <h3 class="feature__subtitle">Современные технологии</h3>
-              <p class="feature__meta">
+              <h3 class="features__subtitle">Современные технологии</h3>
+              <p class="features__meta">
                 Значимость этих проблем настолько очевидна, что реализация плановых заданий.
               </p>
             </li>
@@ -155,7 +155,14 @@
           <ul class="works__list">
             <li class="work__item">
               <div class="work__box">
-                <img class="img" src="./images/box1.jpg" alt="box1" width="370" height="294" />
+                <img
+                  class="img"
+                  srcset="./images/box1@1.jpg 1x, ./images/box1@2.jpg 2x"
+                  src="./images/box1.jpg"
+                  alt="box1"
+                  width="370"
+                  height="294"
+                />
                 <div class="work__img-label">
                   <p class="work__img-text">Десктопные приложения</p>
                 </div>
@@ -163,7 +170,14 @@
             </li>
             <li class="work__item">
               <div class="work__box">
-                <img class="img" src="./images/box2.jpg" alt="box2" width="370" height="294" />
+                <img
+                  class="img"
+                  srcset="./images/box2@1.jpg 1x, ./images/box2@2.jpg 2x"
+                  src="./images/box2.jpg"
+                  alt="box2"
+                  width="370"
+                  height="294"
+                />
                 <div class="work__img-label">
                   <p class="work__img-text">Мобильные приложения</p>
                 </div>
@@ -171,7 +185,14 @@
             </li>
             <li class="work__item">
               <div class="work__box">
-                <img class="img" src="./images/box3.jpg" alt="box3" width="370" height="294" />
+                <img
+                  class="img"
+                  srcset="./images/box3@1.jpg 1x, ./images/box3@2.jpg 2x"
+                  src="./images/box3.jpg"
+                  alt="box3"
+                  width="370"
+                  height="294"
+                />
                 <div class="work__img-label">
                   <p class="work__img-text">Дизайнерские решения</p>
                 </div>
@@ -186,12 +207,31 @@
           <h2 class="section__title teams__title">Наша команда</h2>
           <ul class="teams__list">
             <li class="team__card">
-              <img
-                class="team__avatar"
-                src="./images/team/designer.jpg"
-                alt="дизайнер, игорь демьяненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/team/designer@1.jpg 1x, ./images/team/designer@2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/designer-tablet@1.jpg 1x,
+                    ./images/team/designer-tablet@2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/designer-mobile@1.jpg 1x,
+                    ./images/team/designer-mobile@2.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/designer@1.jpg"
+                  class="img"
+                  alt="дизайнер, игорь демьяненко"
+                />
+              </picture>
               <div class="team__meta">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p lang="en" class="team__position">Product Designer</p>
@@ -228,12 +268,31 @@
               </div>
             </li>
             <li class="team__card">
-              <img
-                class="team__avatar"
-                src="./images/team/developer.jpg"
-                alt="разработчик, ольга репина"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/team/developer@1.jpg 1x, ./images/team/developer@2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/developer-tablet@1.jpg 1x,
+                    ./images/team/developer-tablet@2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/developer-mobile@1.jpg 1x,
+                    ./images/team/developer-mobile@2.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/developer@1.jpg"
+                  class="img"
+                  alt="разработчик, ольга репина"
+                />
+              </picture>
               <div class="team__meta">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p lang="en" class="team__position">Frontend Developer</p>
@@ -270,12 +329,31 @@
               </div>
             </li>
             <li class="team__card">
-              <img
-                src="./images/team/marketing.jpg"
-                alt="маркетолог, николай тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/team/marketing@1.jpg 1x, ./images/team/marketing@2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/marketing-tablet@1.jpg 1x,
+                    ./images/team/marketing-tablet@2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/marketing-mobile@1.jpg 1x,
+                    ./images/team/marketing-mobile@2.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/marketing@1.jpg"
+                  class="img"
+                  alt="маркетолог, николай тарасов"
+                />
+              </picture>
               <div class="team__meta">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p lang="en" class="team__position">Marketing</p>
@@ -312,12 +390,31 @@
               </div>
             </li>
             <li class="team__card">
-              <img
-                src="./images/team/uidesigner.jpg"
-                alt="дизайнер, михаил ермаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/team/designer@1.jpg 1x, ./images/team/designer@2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/designer-tablet@1.jpg 1x,
+                    ./images/team/designer-tablet@2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/designer-mobile@1.jpg 1x,
+                    ./images/team/designer-mobile@2.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/designer@1.jpg"
+                  class="img"
+                  alt="дизайнер, михаил ермаков"
+                />
+              </picture>
               <div class="team__meta">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p lang="en" class="team__position">UI Designer</p>
