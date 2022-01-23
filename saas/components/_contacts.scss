@@ -1,31 +1,92 @@
 .contacts {
   display: flex;
-  margin-left: auto;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
+  flex-direction: column;
 
-.contacts__item + .contacts__item {
-  margin-left: 50px;
-}
+  &__link {
+    display: flex;
+    align-items: center;
+    transition: color 250ms var(--timing-function);
 
-.contacts__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 0 32px 0;
-  color: var(--second-color-text);
-  transition: color 250ms var(--timing-function);
-  &:hover {
-    color: var(--accent-color);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+    &:hover .contacts__icon {
+      fill: var(--accent-color);
+    }
   }
-  &:hover .contacts__icon {
-    fill: var(--accent-color);
-  }
-}
 
-.contacts__icon {
-  margin-right: 10px;
-  fill: var(----second-color-text);
+  &__icon {
+    margin-right: 10px;
+    fill: var(----second-color-text);
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+
+    &__link {
+      font-size: 24px;
+    }
+
+    /* Mail */
+    &__item {
+      order: 2;
+    }
+
+    &__item + &__item > &__link {
+      font-size: 34px;
+      color: var(--accent-color);
+
+      @media screen and (max-width: 479px) {
+        font-size: 27px;
+      }
+    }
+
+    /* Phone */
+    &__item + &__item {
+      order: 1;
+      margin-bottom: 32px;
+    }
+
+    &__icon {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &__item + &__item {
+      margin-top: 10px;
+    }
+
+    &__item + &__item > &__link {
+      padding-bottom: 20px;
+      padding-top: 0;
+    }
+
+    &__item > &__link {
+      padding-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+
+    &__link {
+      font-size: 14px;
+      line-height: 1.14;
+    }
+
+    &__item + &__item {
+      margin-top: 0;
+      margin-left: 30px;
+    }
+  }
 }

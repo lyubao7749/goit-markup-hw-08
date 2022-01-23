@@ -1,8 +1,12 @@
 @import './utils/variables';
+@import './utils/placeholders';
 @import './utils/normalize';
 @import './base/base-styles';
+@import './components/containers';
+@import './components/sections';
 @import './components/header';
 @import './components/logo';
+@import './components/menu-container';
 @import './components/site-nav';
 @import './components/contacts';
 @import './components/hero';
@@ -11,5 +15,6 @@
 @import './components/teams';
 @import './components/customer';
 @import './components/footer';
+@import './components/contact-info';
 @import './components/modal';
 @import './components/portfolio';

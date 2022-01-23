@@ -3,31 +3,28 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
   background: var(--primary-bgr);
   color: var(--main-color-text);
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.nav-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.section {
-  padding: 94px 0 94px 0;
-}
-
-.section__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
 }
 
 .icon {
