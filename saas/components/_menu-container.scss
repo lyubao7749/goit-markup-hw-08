@@ -18,7 +18,10 @@
   }
 
   &__icons-box {
-    @media screen and (min-width: 480px) {
+    display: none;
+    display: flex;
+    justify-content: baseline;
+    @media screen and (max-width: 479px), (min-width: 768px) {
       display: none;
     }
   }
